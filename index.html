@@ -6,15 +6,83 @@
     </head>
     <body>
         <header>
-            <a href="#" class="logo">Logo</a>
+            <a href="#" class="logo">Portfolio</a>
             <ul>
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">About Me</a></li>
                 <li><a href="#">Files</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-        </header>        
+        </header> 
+        <section>
+            <img src="pictures/stars.png" id="stars">
+            <img src="pictures/moon.png" id="moon">
+            <img src="pictures/BackPic.png" id="BackPic">
+            <h2 id="text">Jan Koudijs</h2>
+            <a href="#sec" id="btn">About Me</a>
+            <img src="pictures/FrontPic.png" id="FrontPic">
+        </section>   
+        <div class="sec" id="sec">
+            <h2>Parallax Scrolling Effects</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos vero cum fugiat pariatur veniam aperiam dolores 
+                debitis ducimus delectus quas maxime unde, iure placeat, ratione porro nihil praesentium amet ipsum!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam neque repudiandae 
+                consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
+                earum nisi! Molestiae omnis itaque aperiam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
+                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
+                illum dolore sint eius porro! <br><br>consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
+                earum nisi! Molestiae omnis itaque aperiam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
+                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
+                illum dolore sint eius porro!<br><br>consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
+                earum nisi! Molestiae omnis itaque aperiam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
+                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
+                illum dolore sint eius porro!consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
+                earum nisi! Molestiae omnis itaque aperiam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
+                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
+                illum dolore sint eius porro! <br><br>consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
+                earum nisi! Molestiae omnis itaque aperiam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
+                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
+                illum dolore sint eius porro!consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
+                earum nisi! Molestiae omnis itaque aperiam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
+                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
+                illum dolore sint eius porro! <br><br>consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
+                earum nisi! Molestiae omnis itaque aperiam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
+                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
+                illum dolore sint eius porro!consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
+                earum nisi! Molestiae omnis itaque aperiam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
+                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
+                illum dolore sint eius porro! <br><br></p>
+        </div> 
+        
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let BackPic = document.getElementById('BackPic');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let FrontPic = document.getElementById('FrontPic');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 0.75 + 'px';
+                BackPic.style.top = value * 0.5 + 'px';
+                FrontPic.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 3 + 'px';
+                btn.style.marginTop = value * 2 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
     </body>
 </html>
 
-/* 4:54 */
+<!--4:54-->  
