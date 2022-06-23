@@ -6,6 +6,8 @@
         <script src="https://kit.fontawesome.com/fbe80f8e95.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <div id="progressbar"></div>
+        <div id="scrollPath"></div>
         <header>
             <a href="#top" class="logo">Portfolio</a>
             <ul>
@@ -17,6 +19,7 @@
         </header> 
         <section>
             <img src="pictures/stars.png" id="stars">
+            <img src="pictures/jannie.png" id="jannie">
             <img src="pictures/moon.png" id="moon">
             <img src="pictures/BackPic.png" id="BackPic">
             <h2 id="text">Jan Koudijs</h2>
@@ -24,43 +27,15 @@
             <img src="pictures/FrontPic.png" id="FrontPic">
         </section>   
         <div class="sec" id="sec">
-            <h2>Parallax Scrolling Effects</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos vero cum fugiat pariatur veniam aperiam dolores 
-                debitis ducimus delectus quas maxime unde, iure placeat, ratione porro nihil praesentium amet ipsum!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quibusdam neque repudiandae 
-                consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
-                earum nisi! Molestiae omnis itaque aperiam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
-                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
-                illum dolore sint eius porro! <br><br>consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
-                earum nisi! Molestiae omnis itaque aperiam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
-                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
-                illum dolore sint eius porro!<br><br>consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
-                earum nisi! Molestiae omnis itaque aperiam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
-                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
-                illum dolore sint eius porro!consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
-                earum nisi! Molestiae omnis itaque aperiam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
-                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
-                illum dolore sint eius porro! <br><br>consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
-                earum nisi! Molestiae omnis itaque aperiam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
-                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
-                illum dolore sint eius porro!consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
-                earum nisi! Molestiae omnis itaque aperiam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
-                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
-                illum dolore sint eius porro! <br><br>consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
-                earum nisi! Molestiae omnis itaque aperiam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
-                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
-                illum dolore sint eius porro!consequatur totam inventore, provident illo fugit. In recusandae unde dolorem nihil tenetur, 
-                earum nisi! Molestiae omnis itaque aperiam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odio, dicta eaque 
-                possimus soluta doloremque cupiditate fuga nobis nisi alias quas inventore veniam distinctio 
-                illum dolore sint eius porro! <br><br></p>
+            <h2>About Me</h2>
+            <p>Here I will tell you something about myself, what kind of work I do, and what my hobbies are.</p>
+            <h3>Who Am I</h3>
+            <p>My name is Jan Koudijs. <br> I am 17 years old (2004) and I live in Bennekom, municipality of Ede. <br>
+                I completed havo at the van lodenstein college in kesteren. <br>
+                After this I started studying ICT at the Christian University of Applied Sciences Ede (CHE). <br>
+                I am currently in my first year and have not yet obtained my propaedeutic certificate.
+            </p>
+            <h3>My Work</h3>
         </div> 
         
         <div class="footer__container">
@@ -112,6 +87,7 @@
         
         <script>
             let stars = document.getElementById('stars');
+            let jannie = document.getElementById('jannie');
             let moon = document.getElementById('moon');
             let BackPic = document.getElementById('BackPic');
             let text = document.getElementById('text');
@@ -122,6 +98,7 @@
             window.addEventListener('scroll', function(){
                 let value = window.scrollY;
                 stars.style.left = value * 0.25 + 'px';
+                jannie.style.top = value * 0.25 + 'px';
                 moon.style.top = value * 0.75 + 'px';
                 BackPic.style.top = value * 0.5 + 'px';
                 FrontPic.style.top = value * 0 + 'px';
@@ -129,6 +106,14 @@
                 btn.style.marginTop = value * 2 + 'px';
                 header.style.top = value * 0.5 + 'px';
             })
+        </script>
+        <script type="text/javascript">
+            let progress = document.getElementById('progressbar');
+            let totalHeight = document.body.scrollHeight - window.innerHeight;
+            window.onscroll = function(){
+                let progressHeight = (window.pageYOffset / totalHeight) * 100;
+                progress.style.height = progressHeight + "%";
+            }
         </script>
     </body>
 </html>
