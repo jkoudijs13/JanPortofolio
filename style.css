@@ -30,15 +30,6 @@
     z-index: 10000;
 }
 
-@keyframes animate{
-    0%, 100%{
-        filter: hue-rotate(0deg);
-    }
-    50%{
-        filter:hue-rotate(360deg)
-    }
-}
-
 #progressbar:before{
     content: '';
     position: absolute;
@@ -46,7 +37,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, #008aff, #00ffe7);
+    background: linear-gradient(to top, #2b1055, #00ffe7);
     filter: blur(5px);
 }
 
@@ -57,7 +48,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, #008aff, #00ffe7);
+    background: linear-gradient(to top, #2b1055, #00ffe7);
     filter: blur(5px);
 }
 
