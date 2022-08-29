@@ -251,6 +251,114 @@ section img#jannie{
     transition: 0.3s ease-out;
 }
 
+/* Information boxes */
+.aboutme {
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 240px auto;
+}
+
+.aboutme .infobox {
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px); /*aanpassen voor grote*/
+    background: cadetblue;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.aboutme .infobox .iconall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.aboutme .infobox:hover .iconall {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.aboutme .infobox .iconall .fa-solid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.aboutme .infobox:hover .iconall .fa-solid {
+    font-size: 40px;
+}
+
+.aboutme .infobox .infocontent {
+    position: absolute;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.aboutme .infobox:hover .infocontent {
+    top: 100px;
+}
+
+.aboutme .infobox .infocontent h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.aboutme .infobox .infocontent h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+}
+
+.aboutme .infobox .infocontent p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.aboutme .infobox:nth-child(1) {
+    background-color: #093491;
+}
+.aboutme .infobox:nth-child(1) .iconall{
+    background-color: #4533ac;
+}
+
+.aboutme .infobox:nth-child(2) {
+    background-color: #0099ff;
+}
+.aboutme .infobox:nth-child(2) .iconall{
+    background-color: #2a00e6;
+}
+
+.aboutme .infobox:nth-child(3) {
+    background-color: #ff00dd;
+}
+.aboutme .infobox:nth-child(3) .iconall{
+    background-color: #ff0040;
+}
+
+
 /* social icons */
 .social__icon--link {
     color: #fff;
