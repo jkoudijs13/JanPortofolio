@@ -179,6 +179,7 @@ section img#jannie{
 .sec{
     position: relative;
     padding: 100px;
+    padding-top: 1px;
     background: #1c0522;
     z-index: 1000;
 }
@@ -257,12 +258,14 @@ section img#jannie{
     width: 1200px;
     height: 300px;
     margin: 240px auto;
+    margin-top: 175px;
+    margin-bottom: 350px;
 }
 
 .aboutme .infobox {
     position: relative;
     width: calc(400px - 30px);
-    height: calc(300px - 30px); /*aanpassen voor grote*/
+    height: calc(440px - 30px); /*aanpassen voor grote*/
     background: cadetblue;
     float: left;
     margin: 15px;
@@ -318,17 +321,11 @@ section img#jannie{
     top: 100px;
 }
 
-.aboutme .infobox .infocontent h3 {
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-size: 24px;
-}
-
 .aboutme .infobox .infocontent p {
     margin: 0;
     padding: 0;
     color: #fff;
+    font-size: 18px;
 }
 
 .aboutme .titles {
@@ -375,6 +372,14 @@ section img#jannie{
     background-color: #008bcc;
 }
 
+.hobby_link {
+    text-decoration: none;
+    color: rgb(67, 45, 145);
+}
+.hobby_link:visited {
+    text-decoration: none;
+    color: rgb(67, 45, 145);
+}
 
 /* social icons */
 .social__icon--link {
