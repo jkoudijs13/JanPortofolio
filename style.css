@@ -322,12 +322,6 @@ section img#jannie{
     margin: 0;
     padding: 0;
     color: #fff;
-}
-
-.aboutme .infobox .infocontent h3 {
-    margin: 0;
-    padding: 0;
-    color: #fff;
     font-size: 24px;
 }
 
@@ -337,6 +331,29 @@ section img#jannie{
     color: #fff;
 }
 
+.aboutme .titles {
+    position: relative;
+    text-align: center;
+    display: flex;
+    float: left;
+    margin-top: -2rem;
+    color: #fff;
+    font-size: 20px;
+}
+
+.aboutme .titles h3:nth-child(1) {
+    margin-right: 15.9rem;
+    margin-left: 7.2rem;
+}
+.aboutme .titles h3:nth-child(3) {
+    margin-left: 13.8rem;
+}
+
+.aboutme #box2:hover + .h3_2{
+    color: transparent;
+}
+
+
 .aboutme .infobox:nth-child(1) {
     background-color: #093491;
 }
@@ -345,17 +362,17 @@ section img#jannie{
 }
 
 .aboutme .infobox:nth-child(2) {
-    background-color: #0099ff;
+    background-color: #5740c0;
 }
 .aboutme .infobox:nth-child(2) .iconall{
-    background-color: #2a00e6;
+    background-color: #6e4eff;
 }
 
 .aboutme .infobox:nth-child(3) {
-    background-color: #ff00dd;
+    background-color: #0073a8;
 }
 .aboutme .infobox:nth-child(3) .iconall{
-    background-color: #ff0040;
+    background-color: #008bcc;
 }
 
 
